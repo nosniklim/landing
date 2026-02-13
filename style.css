@@ -27,6 +27,7 @@ a {
   position: sticky;
   top: 0;
   background: rgba(5, 11, 22, 0.9);
+  z-index: 20;
 }
 
 .header__inner {
