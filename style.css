@@ -60,6 +60,36 @@ a {
   text-align: center;
 }
 
+.hero::before {
+  position: absolute;
+  top: -140px;                  /* 表示位置 */
+  left: 50%;
+  width: 1400px;                /* ぼかしの幅 */
+  height: 300px;                /* ぼかしの高さ */
+  /* 青み掛かったぼかし
+  background:
+    radial-gradient(
+      ellipse at center top,
+      rgba(2,91,207,1) 0%,
+      rgba(2,91,207,0.8) 30%,
+      rgba(2,91,207,0.2) 60%
+    );
+  */
+  background:
+    radial-gradient(
+      ellipse at center top,
+      rgba(85,225,221,1) 0%,
+      rgba(0,100,158,1) 24%,
+      rgba(2,8,22,1) 100%
+    );
+  content: "";
+  transform: translateX(-50%);
+  filter: blur(60px);           /* ぼかしの柔らかさ */
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: -1;
+}
+
 .hero h1 {
   font-size: 48px;
   line-height: 1.2;
@@ -142,8 +172,30 @@ a {
 
 /* Pricing */
 .pricing {
+  position: relative; /* ぼかし効果の表示用 */
   padding: 48px 96px;
   text-align: center;
+}
+
+.pricing::before {
+  position: absolute;
+  top: 300px;                   /* 表示位置 */
+  left: 50%;
+  width: 900px;                 /* ぼかしの幅 */
+  height: 300px;                /* ぼかしの高さ */
+  background:
+    radial-gradient(
+      ellipse at center top,
+      rgba(85, 225, 221, 1) 0%,
+      rgba(0, 100, 158, 1) 24%,
+      rgba(2, 8, 22, 1) 100%
+    );
+  content: "";
+  transform: translateX(-50%);
+  filter: blur(60px);           /* ぼかしの柔らかさ */
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .price-grid {
@@ -273,9 +325,31 @@ a {
 
 /* Reviews */
 .reviews {
+  position: relative; /* ぼかし効果の表示用 */
   padding: 48px 0;
   text-align: center;
   overflow: hidden;
+}
+
+.reviews::before {
+  position: absolute;
+  bottom: -10%;                  /* 表示位置 */
+  left: 0%;
+  width: 1400px;                 /* ぼかしの幅 */
+  height: 400px;                 /* ぼかしの高さ */
+  background:
+    radial-gradient(
+      ellipse at center bottom,
+      rgba(85, 225, 221, 1) 24%,
+      rgba(0, 100, 158, 1) 40%,
+      rgba(2, 8, 22, 1) 100%
+    );
+  content: "";
+  transform: translateX(-60%);
+  filter: blur(20px);            /* ぼかしの柔らかさ */
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .review-grid {
