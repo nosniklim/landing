@@ -4,10 +4,10 @@
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
   font-size: 16px;
-  background: #050b16;
   color: #fff;
+  background: #050b16;
+  font-family: system-ui, sans-serif;
 }
 
 a {
@@ -16,9 +16,9 @@ a {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 96px;
+  margin: 0 auto;
+  max-width: 1200px;
   gap: 56px;
 }
 
@@ -31,24 +31,27 @@ a {
 
 .header__inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 64px;
 }
 
 .logo {
   font-size: 22px;
   font-weight: 600;
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .nav a {
   margin-left: 24px;
-  color: #AEAEB8;
+  color: #aeaeb8;
 }
 
 /* Hero */
@@ -63,20 +66,23 @@ a {
 }
 
 .hero__text {
-  color: #AEAEB8;
-  max-width: 640px;
   margin: 16px auto 0;
+  color: #aeaeb8;
+  max-width: 640px;
 }
 
 /* Section */
 .section__badge {
   display: inline-block;
   padding: 4px 12px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0) 100%);
   font-size: 13px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  border-radius: 999px;
   margin-bottom: 16px;
 }
 
@@ -89,7 +95,7 @@ a {
 }
 
 .section__text {
-  color: #AEAEB8;
+  color: #aeaeb8;
 }
 
 /* Features */
@@ -118,19 +124,19 @@ a {
 }
 
 .feature-card__title {
-  color: #fff;
   font-size: 20px;
   font-weight: 600;
+  color: #fff;
 }
 
 .feature-card__text {
-  color: #AEAEB8;
+  color: #aeaeb8;
 }
 
-.feature-card__icon{
+.feature-card__icon {
   display: block;
-  width:48px;
-  height:48px;
+  width: 48px;
+  height: 48px;
   background-color: #fff;
 }
 
@@ -149,9 +155,9 @@ a {
 
 .price-card {
   padding: 32px;
-  border-radius: 16px;
+  background: rgba(2, 8, 22, 1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(2,8,22,1);
+  border-radius: 16px;
   text-align: left;
   gap: 32px;
 }
@@ -162,8 +168,8 @@ a {
 }
 
 .price-card.is-main {
-  background: #fff;
   color: #000;
+  background: #fff;
 }
 
 .price-card.is-main hr {
@@ -172,27 +178,27 @@ a {
 
 .price-card__container {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
+  justify-content: space-between;
   gap: 12px;
 }
 
 .price-card__title {
+  margin: 0;
   font-size: 22px;
   font-weight: 600;
-  margin: 0;
 }
 
 .price-card__badge {
-  background: rgba(255, 178, 29, 0.5);
   padding: 6px 10px;
-  border-radius: 8px;
   font-size: 14px;
+  background: rgba(255, 178, 29, 0.5);
+  border-radius: 8px;
 }
 
 .price-card__text {
   font-size: 14px;
-  color: #AEAEB8;
+  color: #aeaeb8;
 }
 
 .price-card__wrapper {
@@ -208,7 +214,7 @@ a {
 
 .price-card__period {
   font-size: 14px;
-  color: #AEAEB8;
+  color: #aeaeb8;
 }
 
 .price-card.is-main .price-card__period {
@@ -217,24 +223,30 @@ a {
 
 .price-card__cta {
   display: block;
-  margin-top: 24px;
-  padding: 8px 20px;
   width: 100%;
-  border-radius: 8px;
-  border: none;
-  background: linear-gradient(180deg, 
-    rgba(255, 255, 255, 1) 0%,
-    rgba(229, 229, 232, 0.8) 100%);
-  color: #000;
+  padding: 8px 20px;
   font-size: 16px;
+  color: #000;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(229, 229, 232, 0.8) 100%
+    );
+  border: none;
+  margin-top: 24px;
+  border-radius: 8px;
   text-align: center;
 }
 
 .price-card.is-main .price-card__cta {
-  background: linear-gradient(180deg, 
-    rgba(2, 91, 207, 1) 0%,
-    rgba(0, 145, 189, 0.8) 100%);
   color: #fff;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2, 91, 207, 1) 0%,
+      rgba(0, 145, 189, 0.8) 100%
+    );
 }
 
 .price-card__list {
@@ -247,15 +259,15 @@ a {
   line-height: 1.8;
 }
 .price-card__item::after {
-  content: '';
-  display: block;
   position: absolute;
-  top: .5em;
+  top: 0.5em;
   left: -1.5em;
+  display: block;
   width: 10px;
   height: 5px;
-  border-left: 3px solid #73D0B9;
-  border-bottom: 3px solid #73D0B9;
+  content: "";
+  border-left: 3px solid #73d0b9;
+  border-bottom: 3px solid #73d0b9;
   transform: rotate(-45deg);
 }
 
@@ -273,33 +285,33 @@ a {
 }
 .review-card {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   padding: 32px;
-  border-radius: 16px;
-  background: #fff;
   color: #000;
+  background: #fff;
+  flex-direction: column;
+  border-radius: 16px;
   text-align: left;
   gap: 24px;
 }
 
 .review-card__text {
+  margin: 0;
   font-size: 16px;
   line-height: 1.6;
-  margin: 0;
 }
 
 .review-card__star {
-  margin: 0;
   display: inline-flex;
   align-items: center;
+  margin: 0;
   gap: 6px;
 }
 
 .star-icon {
+  display: inline-block;
   width: 18px;
   height: 18px;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -315,20 +327,20 @@ a {
 }
 
 .review-card__icon {
+  display: block;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
 }
 
 .review-card__name {
-  font-size: 14px;
   margin: 0;
+  font-size: 14px;
 }
 .review-card__role {
-  font-size: 14px;
   margin: 0;
+  font-size: 14px;
 }
 
 /* FAQ */
@@ -344,10 +356,10 @@ a {
 }
 
 .faq-item {
-  font-size: 18px;
   padding: 12px 16px 12px 24px;
-  border-radius: 10px;
+  font-size: 18px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
   text-align: left;
 }
 
@@ -358,24 +370,24 @@ a {
 }
 
 .faq-item__desc {
-  color: #AEAEB8;
+  color: #aeaeb8;
 }
 
 .faq-item summary::-webkit-details-marker { display: none; }
 
 .faq-item summary::after {
-  content: '＋';
   position: absolute;
-  right: 12px;
   top: 50%;
-  transform: translateY(-50%);
+  right: 12px;
   font-size: 18px;
-  color: #AEAEB8;
-  transition: transform .4s ease, content .2s ease;
+  color: #aeaeb8;
+  content: "＋";
+  transform: translateY(-50%);
+  transition: transform 0.4s ease, content 0.2s ease;
 }
 
 .faq-item[open] summary::after {
-  content: '－';
+  content: "－";
 }
 
 /* Footer */
@@ -387,15 +399,15 @@ a {
 
 .footer__inner {
   display: inline-flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 64px;
   padding-bottom: 20px;
 }
 
 .footer__copyright {
-  color: #AEAEB8;
   font-size: 14px;
+  color: #aeaeb8;
   opacity: 0.6;
   margin-top: 52px;
 }
