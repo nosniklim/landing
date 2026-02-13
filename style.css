@@ -377,17 +377,17 @@ a {
 
 .faq-item summary::after {
   position: absolute;
-  top: 50%;
   right: 12px;
   font-size: 18px;
-  color: #aeaeb8;
-  content: "＋";
-  transform: translateY(-50%);
-  transition: transform 0.4s ease, content 0.2s ease;
+  color: #AEAEB8;
+  content: '＋';
+  transform: rotate(90deg);
+  transition: transform .4s ease, opacity .2s ease;
 }
 
 .faq-item[open] summary::after {
-  content: "－";
+  content: '－';
+  transform: rotate(180deg);
 }
 
 /* Footer */
