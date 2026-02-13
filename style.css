@@ -148,6 +148,7 @@ a {
 }
 
 .feature-card {
+  max-width: 320px;
   padding: 32px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -174,7 +175,7 @@ a {
 /* Pricing */
 .pricing {
   position: relative; /* ぼかし効果の表示用 */
-  padding: 48px 96px;
+  padding: 48px 0;
   text-align: center;
 }
 
@@ -207,6 +208,7 @@ a {
 }
 
 .price-card {
+  width: 320px;
   padding: 32px;
   background: rgba(2, 8, 22, 1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -361,6 +363,7 @@ a {
 .review-card {
   display: flex;
   justify-content: space-between;
+  width: 320px;
   padding: 32px;
   color: #000;
   background: #fff;
@@ -420,7 +423,7 @@ a {
 
 /* FAQ */
 .faq {
-  padding: 48px 96px;
+  padding: 48px 0;
   text-align: center;
 }
 
@@ -431,7 +434,7 @@ a {
 }
 
 .faq-item {
-  padding: 12px 16px 12px 24px;
+  padding: 12px 12px 12px 24px;
   font-size: 18px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
@@ -442,6 +445,9 @@ a {
   list-style: none;
   cursor: pointer;
   position: relative;
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
 }
 
 .faq-item__desc {
@@ -451,7 +457,9 @@ a {
 .faq-item summary::-webkit-details-marker { display: none; }
 
 .faq-item summary::after {
-  position: absolute;
+  position: static;
+  margin-left: auto;
+  transform: none;
   right: 12px;
   font-size: 18px;
   color: #AEAEB8;
@@ -484,15 +492,29 @@ a {
   font-size: 14px;
   color: #aeaeb8;
   opacity: 0.6;
-  margin-top: 52px;
+  margin-top: 40px;
 }
 
 /* Tablet */
 @media (min-width: 810px) and (max-width: 1199px) {
+  .container {
+    padding: 0 40px;
+  }
+
   .logo {
     background: none;
     -webkit-background-clip: initial;
     -webkit-text-fill-color: #ffffff;
+  }
+
+  .hero {
+    padding: 72px 0 36px;
+  }
+
+  .features,
+  .pricing,
+  .reviews {
+    padding: 36px 0;
   }
 
   .feature-grid {
@@ -502,14 +524,76 @@ a {
   .feature-grid > *:not(:nth-child(-n+3)) {
     display: block;
   }
+
+  .feature-card {
+    max-width: 800px;
+    width: auto;
+  }
+
+  .price-grid {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+   .review-grid {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .review-grid > .review-card {
+    scroll-snap-align: center;
+  }
+
+  .hero::before {
+    width: 100%;
+  }
+
+  .pricing::before {
+    width: 60%;
+  }
+
+  .reviews::before {
+    width: 100%;
+  }
+
+  .faq {
+    padding: 36px 0 24px;
+  }
+
+  .footer {
+    text-align: left;
+    padding: 40px 36px 24px 36px;
+  }
+
+  .footer nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+    a {
+      margin-left: 0;
+    }
+  }
+
+  .footer__copyright {
+    margin-top: 36px;
+  }
 }
 
 /* SP */
 @media (max-width: 809px) {
+  .container {
+    padding: 0 32px;
+  }
+
   .logo {
     background: none;
     -webkit-background-clip: initial;
     -webkit-text-fill-color: #ffffff;
+  }
+
+  .hero {
+    padding: 64px 0 32px;
   }
 
   .hero h1 {
@@ -520,13 +604,65 @@ a {
     display: inline;
   }
 
+  .features,
+  .pricing,
+  .reviews {
+    padding: 32px 0;
+  }
+
   .feature-grid,
-  .price-grid,
-  .review-grid {
+  .price-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .feature-grid > *:not(:nth-child(-n+3)) {
     display: block;
+  }
+
+  .price-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .review-grid {
+    gap: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .review-grid > .review-card {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+  }
+
+  .review-card {
+    width: 300px;
+  }
+
+  .faq {
+    padding: 32px 0 24px;
+  }
+
+  .faq-item summary {
+    padding-right: 4px;
+  }
+
+  .footer {
+    text-align: left;
+    padding: 40px 32px 24px 32px;
+  }
+
+  .footer nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+    a {
+      margin-left: 0;
+    }
+  }
+
+  .footer__copyright {
+    margin-top: 32px;
   }
 }
